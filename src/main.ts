@@ -4,4 +4,16 @@ import router from "./router";
 import store from "./store";
 import "./assets/tailwind.css";
 
-createApp(App).use(store).use(router).mount("#app");
+import ClientRepository from "./SupplyPoint/infrastructure/repositories/fromJson/ClientRepository";
+import SupplyPointRepository from "./SupplyPoint/infrastructure/repositories/fromJson/SupplyPointRepository";
+
+const repositories = {
+  clientRepository: new ClientRepository(),
+  supplyPointRepository: new SupplyPointRepository(),
+};
+
+createApp(App)
+  .provide("repositories", repositories)
+  .use(store)
+  .use(router)
+  .mount("#app");
