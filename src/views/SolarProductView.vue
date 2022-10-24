@@ -57,6 +57,7 @@ export default defineComponent({
           cups,
           this.repositories
         );
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (error: any) {
         this.error = error.message;
       }
