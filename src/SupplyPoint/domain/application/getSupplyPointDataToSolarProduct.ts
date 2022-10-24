@@ -1,7 +1,7 @@
 import { BUILDING_TYPES } from "../models/Client";
 import { ISupplyPointDataToSolarProduct } from "../models/SupplyPointDataToSolarProduct";
 import Repositories from "../repositories/Repositories";
-import calculateSolarProductDiscount from "./calculateSolarProductDiscount";
+import calculateSolarProductDiscount from "../services/calculateSolarProductDiscount";
 
 export default async (
   cups: string,
@@ -20,7 +20,6 @@ export default async (
       supplyPointInfo,
     };
   }
-
   const solarProductDiscount = await calculateSolarProductDiscount(
     supplyPointInfo,
     supplyPointRepository
