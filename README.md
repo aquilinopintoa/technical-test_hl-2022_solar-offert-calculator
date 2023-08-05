@@ -1,4 +1,4 @@
-# technical-test_hl2022_vuejs-exercice
+# technical-test_hl-2022_solar-offert-calculator
 
 ## Holaluz Frontend coding test
 
